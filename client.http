@@ -5,6 +5,7 @@ GET http://localhost:3000/api/fitnices
 
 POST http://localhost:3000/api/fitnices
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
 
 {
     "category_id": 1,
@@ -23,6 +24,7 @@ Content-Type: application/json
 ### Show joke id:1 
 
 GET http://localhost:3000/api/fitnices/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
 
 ### Unsuccesfully show joke by id
 
@@ -46,16 +48,40 @@ DELETE http://localhost:3000/api/fitnices/1
 
 DELETE http://localhost:3000/api/fitnices/112312
 
+### Destroy joke i have permissions for 
+DELETE http://localhost:3000/api/fitnices/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
+
+
 ### Succesfully create User
 
 POST http://localhost:3000/api/auth/sign_up
 Content-Type: application/json
 
 {
-    "username": "Eric2",
+    "username": "Eric",
+    "email": "eric@gmail.com",
+    "password": "password",
+    "password_confirmation": "password"
+}
+
+### Sign in with correct details
+
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "email": "eric@gmail.com",
+    "password": "password"
+}
+### Sign in with incorrect details
+
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
     "email": "eric2@gmail.com",
-    "password": "pass2",
-    "password_confirmation": "pass2"
+    "password": "pass4"
 }
 
 

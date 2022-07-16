@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     delete '/fitnices/:id', to: 'fitnices#destroy'
     scope '/auth' do 
       post '/sign_up', to: 'users#create'
+      post '/sign_in', to: 'users#sign_in'
     end
-    
+
   end
 end
