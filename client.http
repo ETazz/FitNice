@@ -1,0 +1,78 @@
+### Index method
+GET http://localhost:3000/api/fitnices
+
+### Successfully made a a extra workout
+
+POST http://localhost:3000/api/fitnices
+Content-Type: application/json
+
+{
+    "category_id": 1,
+    "body": "Selected arm workout"
+}
+
+### Unsuccesfully made a extra workout 
+
+POST http://localhost:3000/api/fitnices
+Content-Type: application/json
+
+{
+    "body": "Selected arm workout"
+}
+
+### Show joke id:1 
+
+GET http://localhost:3000/api/fitnices/1
+
+### Unsuccesfully show joke by id
+
+GET http://localhost:3000/api/fitnices/112312
+
+### Sucessfully update fitnice workout id of 1
+
+PUT http://localhost:3000/api/fitnices/1
+Content-Type: application/json
+
+{
+    "category_id": 2,
+    "body": "Leg workout"
+}
+
+### Successfully delete fitnice workout with id of 1 
+
+DELETE http://localhost:3000/api/fitnices/1
+
+### Unsuccesfully delete fitnice workout by id
+
+DELETE http://localhost:3000/api/fitnices/112312
+
+### Succesfully create User
+
+POST http://localhost:3000/api/auth/sign_up
+Content-Type: application/json
+
+{
+    "username": "Eric2",
+    "email": "eric2@gmail.com",
+    "password": "pass2",
+    "password_confirmation": "pass2"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
