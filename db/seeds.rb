@@ -14,7 +14,7 @@
 fitnice_categories = ["Arms", "Legs", "Chest", "Back", "FitNice", "Bodybuilding", "Cardio", "Shred", "KettleBells", "Barbell Sets", "Training Bench", "Dumbbell Sets", "Treadmill", "Stationary Bicycle", "Rowing Machine", "Resistance Bands", "Squat Rack", "cable machine", "Leg Curl Machine", "Leg Extension Machine", "seated Row Machine", "Lat Machine", "Shoulder Press Machine", "Leg Press Machine"]
 
 if User.count == 0
-    User.create(username: "Tyler", email: "tyler@gmail.com", password: "password", password_confirmation: "password")
+    User.create(username: "erictaz", email: "erictazzyman@gmail.com", password: "password", password_confirmation: "password")
     User.create(username: "Tyler2", email: "tyler2@gmail.com", password: "password2", password_confirmation: "password2")
 end
 
@@ -25,4 +25,7 @@ if Category.all.length == 0
     end
 end
 
-
+if Fitnice.count == 0
+    Fitnice.create(user_id: 1, category_id: 1, body: "workout test for legs")
+    Fitnice.create(user_id: 1, category_id: 2, body: "workout test for arms")
+end

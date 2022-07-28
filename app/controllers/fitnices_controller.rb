@@ -1,11 +1,11 @@
 class FitnicesController < ApplicationController
-    before_action :authenticate_user
+    before_action :authenticate_user, except: [:index, :show]
     before_action :set_fitnice, only: [:show, :update, :destroy]
+    before_action :check_ownership, only: [:update, :destroy]
 
 ### may need to add :show
 
-    before_action :check_ownership, only: [:update, :destroy]
-
+    before_action :check_ownership, only: [ :update, :destroy]
 
 ### need to make it so only the signed in user can see their 
 
@@ -28,7 +28,8 @@ class FitnicesController < ApplicationController
     end
 
     def update
-        @fitnice = Fitnice.create(fitnice_params)
+        @fitnice.update(fitnice_params)
+
         if @fitnice.errors.any?
             render json: @fitnice.errors, status: :unprocessable_entity
         else 
@@ -50,7 +51,7 @@ class FitnicesController < ApplicationController
         begin
         @fitnice = Fitnice.find(params[:id])
         rescue
-            render json: {error: "joke not found"}, status: 404
+            render json: {error: "fitnice not found"}, status: 404
         end
     end
 

@@ -5,7 +5,7 @@ GET http://localhost:3000/api/fitnices
 
 POST http://localhost:3000/api/fitnices
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg2Mjg3NjQsInN1YiI6M30.u8r9Z3iulfG-zxlzRMKlrgMcIAk1oYtbQasm3i8VZ-4
 
 {
     "category_id": 1,
@@ -21,19 +21,20 @@ Content-Type: application/json
     "body": "Selected arm workout"
 }
 
-### Show joke id:1 
+### Show fitnice id:1 
 
 GET http://localhost:3000/api/fitnices/1
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg1Mzg2NzQsInN1YiI6M30.UuYJQHbVjQQ6wwunMQqfLafXmkiDUlvQ-kjw5jZ0k94
 
-### Unsuccesfully show joke by id
+### Unsuccesfully show fitnice by id
 
 GET http://localhost:3000/api/fitnices/112312
 
-### Sucessfully update fitnice workout id of 1
+### Sucessfully update fitnice workout id of 3
 
-PUT http://localhost:3000/api/fitnices/1
+PUT http://localhost:3000/api/fitnices/3
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg1Mzg5MzUsInN1YiI6M30.BAaL_t7RUE_9zdBOXGch76bQjZKITppce8qgFSi64pY
 
 {
     "category_id": 2,
@@ -49,8 +50,8 @@ DELETE http://localhost:3000/api/fitnices/1
 DELETE http://localhost:3000/api/fitnices/112312
 
 ### Destroy joke i have permissions for 
-DELETE http://localhost:3000/api/fitnices/1
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTgwNTU3OTYsInN1YiI6NH0.uBQ4tF_ebdRvNHFs1fGqOrcOIOiy3IuCCI16aRvmduQ
+DELETE http://localhost:3000/api/fitnices/3
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg1Mzg2NzQsInN1YiI6M30.UuYJQHbVjQQ6wwunMQqfLafXmkiDUlvQ-kjw5jZ0k94
 
 
 ### Succesfully create User
@@ -84,7 +85,10 @@ Content-Type: application/json
     "password": "pass4"
 }
 
+# Get categories 
 
+GET http://localhost:3000/api/categories
+Content-Type: application/json
 
 
 
