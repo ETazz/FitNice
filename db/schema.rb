@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_28_051105) do
+ActiveRecord::Schema.define(version: 2022_07_29_042702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,16 +24,16 @@ ActiveRecord::Schema.define(version: 2022_07_28_051105) do
   create_table "fitnices", force: :cascade do |t|
     t.text "body"
     t.bigint "category_id", null: false
+    t.bigint "targetmusclecategory_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.bigint "targetmuscle_id", null: false
     t.index ["category_id"], name: "index_fitnices_on_category_id"
-    t.index ["targetmuscle_id"], name: "index_fitnices_on_targetmuscle_id"
+    t.index ["targetmusclecategory_id"], name: "index_fitnices_on_targetmusclecategory_id"
     t.index ["user_id"], name: "index_fitnices_on_user_id"
   end
 
-  create_table "targetmuscles", force: :cascade do |t|
+  create_table "targetmusclecategories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -48,6 +48,6 @@ ActiveRecord::Schema.define(version: 2022_07_28_051105) do
   end
 
   add_foreign_key "fitnices", "categories"
-  add_foreign_key "fitnices", "targetmuscles"
+  add_foreign_key "fitnices", "targetmusclecategories"
   add_foreign_key "fitnices", "users"
 end

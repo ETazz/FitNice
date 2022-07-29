@@ -5,10 +5,10 @@ GET http://localhost:3000/api/fitnices
 
 POST http://localhost:3000/api/fitnices
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNDMzMDEsInN1YiI6M30.VORyWqUOCOrz99oe6MlbJwCjKQ463oc7ewkcIYsLsFA
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNTc4MTAsInN1YiI6Mn0.5gGFyLzCgzAxtFyxTqjYGJetDmCicqzO5xfyLuUaAU8
 
 {  
-    "targetmuscle_id": 3,
+    "targetmusclecategory_id": 3,
     "category_id": 1,
     "body": "selected quadriceps and FitNice"
 }
@@ -35,7 +35,7 @@ GET http://localhost:3000/api/fitnices/112312
 
 PUT http://localhost:3000/api/fitnices/5
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkwODM2NTEsInN1YiI6M30.YiULUg5PFHOCigrIVRm0eaoTAiUFKxJghxO2CGBdkgU
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNTYxNDksInN1YiI6M30.ohlx948HJ4wOhCZPRM841mMM1Qv-JoZ8Uipfeau7mEk
 
 {
     "targetmuscle_id": 1,
@@ -62,8 +62,8 @@ POST http://localhost:3000/api/auth/sign_up
 Content-Type: application/json
 
 {
-    "username": "Eric",
-    "email": "eric@gmail.com",
+    "username": "ET",
+    "email": "ET@gmail.com",
     "password": "password",
     "password_confirmation": "password"
 }
@@ -74,7 +74,7 @@ POST http://localhost:3000/api/auth/sign_in
 Content-Type: application/json
 
 {
-    "email": "eric@gmail.com",
+    "email": "ET@gmail.com",
     "password": "password"
 }
 ### Sign in with incorrect details

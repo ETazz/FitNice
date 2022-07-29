@@ -3,7 +3,9 @@
 one:
   body: MyText
   category: one
+  targetmusclecategory: one
 
 two:
   body: MyText
   category: two
+  targetmusclecategory: two

@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+# creates a user with user_params. saves it using knock authenticaiton from
+# knock gem
+
     def create 
         @user = User.create(user_params)
         if @user.save
@@ -8,6 +12,9 @@ class UsersController < ApplicationController
             render json: @user.errors, status: :unprocessable_entity
         end
     end
+
+    # user sign in using params. when the user signs in the user receives 
+    # a jwt token which is used to verfiy the user 
 
     def sign_in
         @user = User.find_by_email(params[:email])

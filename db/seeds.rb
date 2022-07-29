@@ -20,21 +20,18 @@ if Category.all.length == 0
     end
 end
 
-fitnice_targetmuscles = ["calves", "hamstrings", "quadriceps", "glutes", "biceps", "triceps", "forearms", "trapezius", "latissimus dorsi"]
+fitnice_targetmusclecategories = ["calves", "hamstrings", "quadriceps", "glutes", "biceps", "triceps", "forearms", "trapezius", "latissimus dorsi"]
 
-if Targetmuscle.all.length == 0 
-    fitnice_targetmuscles.each do |targetmuscle|
-        Targetmuscle.create(name: targetmuscle)
-            puts "created #{targetmuscle} target targetmuscle category"
+
+if Targetmusclecategory.all.length == 0 
+    fitnice_targetmusclecategories.each do |targetmusclecategory|
+        Targetmusclecategory.create(name: targetmusclecategory)
+            puts "created #{targetmusclecategory} target targetmuscle category"
     end
 end
 
-if User.count == 0
-    User.create(username: "erictaz", email: "erictazzyman@gmail.com", password: "password", password_confirmation: "password")
-    User.create(username: "Tyler2", email: "tyler2@gmail.com", password: "password2", password_confirmation: "password2")
-end
+# if User.count == 0
+#     User.create(username: "erictaz", email: "erictazzyman@gmail.com", password: "password", password_confirmation: "password")
+#     User.create(username: "Tyler2", email: "tyler2@gmail.com", password: "password2", password_confirmation: "password2")
+# end
 
-if Fitnice.count == 0
-    Fitnice.create(user_id: 1, category_id: 1, targetmuscle_id: 4, body: "workout test for legs")
-    Fitnice.create(user_id: 1, category_id: 2, targetmuscle_id: 2, body: "workout test for arms")
-end
