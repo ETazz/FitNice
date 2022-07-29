@@ -44,7 +44,7 @@ class FitnicesController < ApplicationController
 
     private 
     def fitnice_params
-        params.require(:fitnice).permit(:category_id, :body)
+        params.require(:fitnice).permit(:targetmuscle_id, :category_id, :body)
     end
 
     def set_fitnice

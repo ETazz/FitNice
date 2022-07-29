@@ -5,11 +5,12 @@ GET http://localhost:3000/api/fitnices
 
 POST http://localhost:3000/api/fitnices
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg2Mjg3NjQsInN1YiI6M30.u8r9Z3iulfG-zxlzRMKlrgMcIAk1oYtbQasm3i8VZ-4
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNDMzMDEsInN1YiI6M30.VORyWqUOCOrz99oe6MlbJwCjKQ463oc7ewkcIYsLsFA
 
-{
+{  
+    "targetmuscle_id": 3,
     "category_id": 1,
-    "body": "Selected arm workout"
+    "body": "selected quadriceps and FitNice"
 }
 
 ### Unsuccesfully made a extra workout 
@@ -32,11 +33,12 @@ GET http://localhost:3000/api/fitnices/112312
 
 ### Sucessfully update fitnice workout id of 3
 
-PUT http://localhost:3000/api/fitnices/3
+PUT http://localhost:3000/api/fitnices/5
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg1Mzg5MzUsInN1YiI6M30.BAaL_t7RUE_9zdBOXGch76bQjZKITppce8qgFSi64pY
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkwODM2NTEsInN1YiI6M30.YiULUg5PFHOCigrIVRm0eaoTAiUFKxJghxO2CGBdkgU
 
 {
+    "targetmuscle_id": 1,
     "category_id": 2,
     "body": "Leg workout"
 }
@@ -90,6 +92,10 @@ Content-Type: application/json
 GET http://localhost:3000/api/categories
 Content-Type: application/json
 
+#Get Target muscles
+
+GET http://localhost:3000/api/targetmuscles
+Content-Type: application/json
 
 
 
