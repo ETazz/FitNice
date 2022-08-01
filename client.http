@@ -5,9 +5,10 @@ GET http://localhost:3000/api/fitnices
 
 POST http://localhost:3000/api/fitnices
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNTc4MTAsInN1YiI6Mn0.5gGFyLzCgzAxtFyxTqjYGJetDmCicqzO5xfyLuUaAU8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkxNjQ4NzQsInN1YiI6MX0.fmldAwzW-wj27EF05pikf30tUL0xxgh-l2Gk-1XyT_c
 
 {  
+    "exercise_id": 1,
     "targetmusclecategory_id": 3,
     "category_id": 1,
     "body": "selected quadriceps and FitNice"

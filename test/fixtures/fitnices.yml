@@ -4,8 +4,10 @@ one:
   body: MyText
   category: one
   targetmusclecategory: one
+  exercise: one
 
 two:
   body: MyText
   category: two
   targetmusclecategory: two
+  exercise: two

@@ -30,6 +30,21 @@ if Targetmusclecategory.all.length == 0
     end
 end
 
+
+fitnice_exercises = ["Push Ups", "Barbell bench press", "dumbbell Bench Press", "Incline Dumbbell chest press", "Machine Chest Press", "Dumbbell Fly", 
+"Pull Ups", "Assisted Pull Ups", "Wide Grip Lat Pull Downs", "Bent Over Row", "Squats", "Walking Lunges", "Leg Extension Machine", "Leg Curl Machine", 
+"Straight Leg Deadlifts", "Weighted Calf Raises", "Do at least 1 exercise per body part", "Handstand Push Up", "Pike Press", "Military Press", "Arnold Presses", 
+"Upright Rows", "Lateral Raises", "Rear Delt Raise", "Reverse Fly", "Reverse Pec Dec Machine", "Dips", "Tricep Pullovers", "Tricep Press", "Tricep Kickbacks", 
+"Straight Bar Curl", "Preacher Curl or Bicep Curl Macine", "Dumbbell Curl", "Concentration Curls", "Traditional Sit Ups", "Crunches", "Weighted Crunches", 
+"Bicycle Crunches", "Leg Raises", "Oblique Crunch", "Plank", "Side Plank", "Back Extension"]
+
+if Exercise.all.length == 0 
+    fitnice_exercises.each do |exercise|
+        Exercise.create(name: exercise)
+            puts "created #{exercise} exercise"
+    end
+end
+
 # if User.count == 0
 #     User.create(username: "erictaz", email: "erictazzyman@gmail.com", password: "password", password_confirmation: "password")
 #     User.create(username: "Tyler2", email: "tyler2@gmail.com", password: "password2", password_confirmation: "password2")

@@ -33,6 +33,7 @@ class FitnicesController < ApplicationController
     end
 
 ## this shows our transformed fitnice
+
     def show 
         render json: @fitnice.transform_fitnice
     end
@@ -63,7 +64,7 @@ class FitnicesController < ApplicationController
 ### and also body
 
     def fitnice_params
-        params.require(:fitnice).permit(:targetmusclecategory_id, :category_id, :body)
+        params.require(:fitnice).permit(:exercise_id, :targetmusclecategory_id, :category_id, :body)
     end
 
 ### this is how fitnices are found. finding fitnices by params id

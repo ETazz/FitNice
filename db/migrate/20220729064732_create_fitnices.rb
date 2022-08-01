@@ -4,6 +4,7 @@ class CreateFitnices < ActiveRecord::Migration[6.1]
       t.text :body
       t.references :category, null: false, foreign_key: true
       t.references :targetmusclecategory, null: false, foreign_key: true
+      t.references :exercise, null: false, foreign_key: true
 
       t.timestamps
     end
