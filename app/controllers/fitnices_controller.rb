@@ -3,7 +3,7 @@ class FitnicesController < ApplicationController
 ### makes sure the user is authenticated for everything on the website except 
 ### index and show 
 
-    before_action :authenticate_user, except: [:index, :show]
+    before_action :authenticate_user, except:[:index, :show]
 
 ### fitnice must be found before being able to show, update or destroy
 

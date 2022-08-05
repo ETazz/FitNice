@@ -20,7 +20,7 @@ if Category.all.length == 0
     end
 end
 
-fitnice_targetmusclecategories = ["calves", "hamstrings", "quadriceps", "glutes", "biceps", "triceps", "forearms", "trapezius", "latissimus dorsi"]
+fitnice_targetmusclecategories = ["calves", "hamstrings", "quadriceps", "glutes", "biceps", "triceps", "forearms", "trapezius","Pectoral muscles", "latissimus dorsi"]
 
 
 if Targetmusclecategory.all.length == 0 
