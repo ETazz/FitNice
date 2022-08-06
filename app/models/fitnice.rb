@@ -3,6 +3,7 @@ class Fitnice < ApplicationRecord
   belongs_to :user
   belongs_to :exercise
   belongs_to :targetmusclecategory
+  validates :body, presence: true, length: { in: 5..100 }
 
   def self.find_by_category(input)
     category = Category.find_by(name: input.capitalize)

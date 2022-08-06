@@ -15,13 +15,12 @@ class FitnicesController < ApplicationController
 
 # before_action :check_ownership, only: [ :update, :destroy]
 
-### this gets all fitnices available
     def index
         @fitnices = Fitnice.all
         render json: @fitnices
     end
 
-### this creates a new fitnice
+### POST / fitnices
 
     def create 
         @fitnice = current_user.fitnices.create(fitnice_params)
@@ -32,7 +31,7 @@ class FitnicesController < ApplicationController
         end
     end
 
-## this shows our transformed fitnice
+## GET / fitnice
 
     def show 
         render json: @fitnice.transform_fitnice
@@ -51,6 +50,7 @@ class FitnicesController < ApplicationController
             render json: @fitnice, status: 201
         end
     end
+
 ### this destroys our fitnice
 
     def destroy 
