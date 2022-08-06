@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:8080','localhost:3000', 'localhost:3001', 'http://192.168.0.29:8080'
+    origins 'http://localhost:8080','localhost:3000', 'localhost:3001', 'http://192.168.0.29:8080', 'https://fitnice.netlify.app'
 
     resource '*',
       headers: :any,
